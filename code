@@ -67,11 +67,12 @@ public:
             }
         }
         int cntC = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {                           //here i am finding Connected componenets
             if (ds.parent[i] == i) cntC++;
         }
-        int ans = cntC - 1;
-        if (cntExtras >= ans) return ans;
+        int ans = cntC - 1;                                    //here connected componens-1 are taking as ans if connected extras more than ans we can tell it is 
+                                                                   possible make a Network Connected.
+        if (cntExtras>= ans) return ans;
         return -1;
     }
 };
