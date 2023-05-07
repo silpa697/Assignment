@@ -2,9 +2,9 @@
 using namespace std;
 
 //User function Template for C++
-class DisjointSet {                                                        we took Disjointset becoz we can find perticular nodes are belong to same componenent or not 
-                                                                            we can find in constant time complexitry if you use backtraking approach(BFS/DFS) it will 
-                                                                             it will take O(N+E).
+class DisjointSet {                                                       // we took Disjointset becoz we can find perticular nodes are belong to same componenentor
+                                                                           not we can find in constant time complexitry if you use backtraking approach(BFS/DFS) it will 
+                                                                              take O(N+E).
 public:
     vector<int> rank, parent, size;
     DisjointSet(int n) {
@@ -58,7 +58,7 @@ public:
     int Solve(int n, vector<vector<int>>& edge) {                     //n is number of nodes and vector<vector<int>>& edge-here we are taking total edges
         DisjointSet ds(n);                                             //here we are callingDisjointSet  this will find the Parent and  union like Rank and size
         int cntExtras = 0;
-        for (auto it : edge) {
+        for (auto it : edge) {                                          //here we are finding extra edges
             int u = it[0];
             int v = it[1];
             if (ds.findUPar(u) == ds.findUPar(v)) {
